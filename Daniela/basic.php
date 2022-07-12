@@ -41,19 +41,44 @@
 
 <!-- Exercise two -->
 
-<p>BASIC TWO</p>
+<!-- <p>BASIC TWO</p> -->
 
-
+<!-- 
 <?php
-       function addFunction($num1, $num2)
+       function divideFunction($num1, $num2)
        {
            $sum = $num1 / $num2;
            return  $sum;
        }
-       $return_value = addFunction(55, 5);
+       $return_value = divideFunction(55, 5);
        echo "Number 55 divided by number 5 is : $return_value";
        ?>
 
+ -->
+
+
+
+
+ 
+<!-- Exercise three -->
+<!-- 
+<p>BASIC THREE</p>
+
+
+<?php
+       function sumGrades($Math, $Physics, $English)
+       {
+           $sum = $Math + $Physics + $English;
+           return  $sum;
+       }
+       $return_value = sumGrades(3, 4, 5);
+       echo "Sum: $return_value";
+       echo "<br/>";
+       $average = $return_value / 3;
+       echo "Average: $average";
+       ?>
+
+ -->
 
 
 

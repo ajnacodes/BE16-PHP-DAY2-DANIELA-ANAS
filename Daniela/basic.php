@@ -100,13 +100,20 @@ function areaOrVolume($Width, $Height, $Length)
 }
 $returnArea = areaOrVolume( 2, 4, 1);
 
+echo "Width = 2
+<br/>  Height = 4 
+<br/>Volume = 10";
+echo "<br/>";
+echo "<br/>";
+
 echo "The area of the box is " .$returnArea;
+echo "<br/>";
 echo "<br/>";
 
 
 $returnVolume = areaOrVolume( 2, 4, 10);
 
-echo "The area of the box is " .$returnVolume;
+echo "The volume of the box is " .$returnVolume;
 echo "<br/>";
      
 

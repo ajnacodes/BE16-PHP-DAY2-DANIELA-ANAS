@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Basic Exercises</title>
 </head>
 <body>
@@ -175,20 +177,49 @@ echo  " 200 minutes is <br/> ". convertMinsToHours(200);
 
 
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-  Name: <input type="text" name="fname">
+  First name: <input type="text" name="fName">
+  Last name: <input type="text" name="lName">
+  Age: <input type="text" name="age">
+  
   <input type="submit">
 </form>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
-  $name = $_POST['fname'];
-  if (empty($name)) {
+  $fName = $_POST['fName'];
+  $lName = $_POST['lName'];
+  $age = $_POST['age'];
+  if (empty($lName) || empty($lName) || empty($age)) {
     echo "Name is empty";
-  } else {
-    echo $name;
+  } else if(strlen($lName)  > 5 || strlen($fName)  > 5 ) {
+    echo "
+    <div class='card m-5 p-1' style='width: 18rem;'>
+  <div class='card-body'>
+    <h6 class='card-subtitle mb-2  text-danger'>$fName $lName</h6>
+    <p class='card-text'>This person is $age years old.</p>
+  </div>
+</div>
+    ";
+  } else  if (strlen($lName)  <= 5 || strlen($fName)  <= 5 ){
+    echo "
+    <div class='card m-5 p-1' style='width: 18rem;'>
+  <div class='card-body'>
+    <h6 class='card-subtitle mb-2  text-success'>$fName $lName</h6>
+    <p class='card-text'>This person is $age years old.</p>
+  </div>
+</div>
+    ";
   }
-}
+};
+
+
+echo "
+
+
+
+"
+
 ?>
 
 

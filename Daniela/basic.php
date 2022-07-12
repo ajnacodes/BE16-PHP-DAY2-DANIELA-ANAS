@@ -82,5 +82,38 @@
 
 
 
+ 
+<!-- Exercise four -->
+
+<p>BASIC FOUR</p>
+
+
+<?php
+
+function areaOrVolume($Width, $Height, $Length)
+{
+
+    $volume = $Length * $Width * $Height;
+    return  $volume;
+
+
+}
+$returnArea = areaOrVolume( 2, 4, 1);
+
+echo "The area of the box is " .$returnArea;
+echo "<br/>";
+
+
+$returnVolume = areaOrVolume( 2, 4, 10);
+
+echo "The area of the box is " .$returnVolume;
+echo "<br/>";
+     
+
+       ?>
+
+
+
+
 </body>
 </html>

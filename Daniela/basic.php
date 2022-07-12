@@ -176,10 +176,11 @@ echo  " 200 minutes is <br/> ". convertMinsToHours(200);
 
 
 
-<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+<form method="POST" action="basic.php">
   First name: <input type="text" name="fName">
   Last name: <input type="text" name="lName">
   Age: <input type="text" name="age">
+  Hobbies: <input type="text" name="hobbies">
   
   <input type="submit">
 </form>
@@ -190,14 +191,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $fName = $_POST['fName'];
   $lName = $_POST['lName'];
   $age = $_POST['age'];
+  $hobbies = $_POST['hobbies'];
   if (empty($lName) || empty($lName) || empty($age)) {
-    echo "Name is empty";
+    echo "Please fill out all the fields.";
   } else if(strlen($lName)  > 5 || strlen($fName)  > 5 ) {
     echo "
     <div class='card m-5 p-1' style='width: 18rem;'>
   <div class='card-body'>
     <h6 class='card-subtitle mb-2  text-danger'>$fName $lName</h6>
-    <p class='card-text'>This person is $age years old.</p>
+    <p class='card-text'>This person is $age years old, and his/her hobbies are: $hobbies.</p>
   </div>
 </div>
     ";
@@ -207,6 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class='card-body'>
     <h6 class='card-subtitle mb-2  text-success'>$fName $lName</h6>
     <p class='card-text'>This person is $age years old.</p>
+    <p class='card-text'>This person is $age years old, and his/her hobbies are: $hobbies.</p>
   </div>
 </div>
     ";

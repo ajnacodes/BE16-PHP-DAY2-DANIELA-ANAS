@@ -9,8 +9,10 @@
 <body>
     
 
-<!-- Exercise one -->
 
+
+<!-- Exercise one -->
+<!-- 
 <p>BASIC ONE</p>
        <form action="basic.php" method ="GET">
            Name: <input type="text"  name="name" />
@@ -30,10 +32,27 @@
            }
        };
 
+       ?> -->
+
+
+
+
+
+
+<!-- Exercise two -->
+
+<p>BASIC TWO</p>
+
+
+<?php
+       function addFunction($num1, $num2)
+       {
+           $sum = $num1 / $num2;
+           return  $sum;
+       }
+       $return_value = addFunction(55, 5);
+       echo "Number 55 divided by number 5 is : $return_value";
        ?>
-
-
-
 
 
 

@@ -146,11 +146,83 @@ function convertToHoursMins($time, $format = '%02d:%02d') {
     return sprintf($format, $hours, $minutes);
 }
 
-echo  " 200 minutes is <br/> ". convertToHoursMins(200, '%02d hours %02d minutes'); // should output 4 hours 17 minutes
+echo  " 200 minutes is <br/> ". convertToHoursMins(200, '%02d hours %02d minutes'); 
 
        ?> -->
 
 
+<!-- IRATI VERSION -->
+
+
+<!-- 
+<?php
+function convertMinsToHours($time) {
+    if ($time < 1) {
+        return;
+    }
+    $hours = floor($time / 60);
+    $minutes = ($time % 60);
+    return sprintf('%02d hours %02d minutes', $hours, $minutes);
+}
+echo  " 200 minutes is <br/> ". convertMinsToHours(200); 
+       ?> -->
+
+
+<!-- Exercise six -->
+
+<p>BASIC SIX</p>
+
+
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
+
+
+
+
+
+
+
+
+
+
+       <!-- <form action="basic.php" method ="GET">
+           First name: <input type="text"  name="fName" />
+           Last name: <input type ="text" name="lName" />
+           Age: <input type="text"  name="age" />
+           <input  type="submit" name="submit"  />
+       
+       <form action="basic.php" method ="POST">
+       Hobbies: <input type ="text" name="hobbies" />
+       </form>
+       <?php
+       if( isset($_GET['submit']))
+       {
+           if( $_GET["fName"] || $_GET["lName"] )
+           {
+               echo "Welcome ". $_GET[ "fName"] .$_GET["lName"]. "<br />";
+            
+           }else if (empty($_GET["fName"] || $_GET["lName"]))
+           {
+            echo "Please fill in your name and surname.";
+           }
+       };
+
+       ?>  -->
 
 
 </body>
